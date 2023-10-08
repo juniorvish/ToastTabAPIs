@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToastTab API Response</title>
+    <link href="{{ url_for('static', filename='css/tailwind.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl my-4">ToastTab API Response</h1>
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <pre id="jsonResponse" class="overflow-x-auto bg-gray-800 text-white p-4 rounded-lg"></pre>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('jsonResponse').textContent = JSON.stringify({{ response_body }}, null, 2);
+    </script>
+</body>
+</html>
